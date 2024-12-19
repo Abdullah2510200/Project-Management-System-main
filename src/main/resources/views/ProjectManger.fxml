@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500" prefWidth="400" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Controllers.ProjectManagerController">
+    <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Project Manager Dashboard" />
+
+    <!-- View Project Completion -->
+    <Button onAction="#onViewProjects" text="View Projects" />
+    <TextArea fx:id="projectCompletionTextArea" editable="false" prefHeight="100" wrapText="true" />
+
+    <!-- Update Project Completion -->
+    <HBox alignment="CENTER" spacing="5">
+        <TextField fx:id="projectNameField" prefHeight="20.0" prefWidth="135.0" promptText="Project Name" />
+        <TextField fx:id="projectPercentageField" prefHeight="21.0" prefWidth="143.0" promptText="Completion %" />
+        <Button onAction="#onUpdateProject" text="Update Project" />
+    </HBox>
+    <Label fx:id="updateStatusLabel" style="-fx-text-fill: green;" />
+
+    <!-- Report Employee -->
+    <VBox alignment="CENTER" spacing="5">
+        <TextField fx:id="employeeNameField" prefHeight="16.0" prefWidth="310.0" promptText="Employee Name" />
+        <TextField fx:id="reportDetailsField" prefHeight="26.0" prefWidth="362.0" promptText="Report Details" />
+        <Button onAction="#onReportEmployee" text="Report Employee" />
+        <Label fx:id="reportStatusLabel" />
+    </VBox>
+</VBox>
